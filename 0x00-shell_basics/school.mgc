@@ -1,2 +1,2 @@
-0 string SCHOOL School data
-file -C -m school
+echo '0 string SCHOOL School data file'
+file -m school
