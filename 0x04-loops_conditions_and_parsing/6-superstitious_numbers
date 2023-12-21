@@ -20,5 +20,5 @@ do
 			echo "bad luck from Italy"
 			;;
 	esac
-	((counter++))
+	((count++))
 done
