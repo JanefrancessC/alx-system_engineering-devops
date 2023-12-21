@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# A script that displays Best School except of the 9th iteration
+
+counter=0;
+
+while [ $counter -lt 10 ];
+do
+	if [ $counter -eq 9 ]
+	then
+		printf "Hi\nBest School\n"
+	else
+		echo "Best School"
+	fi
+	((counter++))
+done
