@@ -12,7 +12,7 @@ then
 		
 		if [ -f "$filename" ]
 		then
-		echo "school is a regular file"
+			echo "school is a regular file"
 		fi
 	else
 		echo "school file is empty"
