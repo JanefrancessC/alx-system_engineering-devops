@@ -8,15 +8,15 @@
 
 filename="/var/run/myscript.pid"
 
-deletefile() {
+function deletefile() {
 	if [ -e "$filename" ]; then
 		rm "$filename"
 	fi
 	exit
 }
-trap "echo 'I hate the kill command';" 15
-trap "echo 'Y U no love me?!';" 2
-trap  'deletefile;' 3 15
+trap "echo 'I hate the kill command';" SIGTERM
+trap "echo 'Y U no love me?!';" SIGINT
+trap  'deletefile;' SIGQUIT SIGTERM
 
 echo $$ > "$filename"
 
