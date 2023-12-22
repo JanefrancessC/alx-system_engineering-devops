@@ -1,0 +1,16 @@
+#!/bin/bash
+
+directory="/root/alx-system_engineering-devops/0x05-processes_and_signals"
+
+# Get the list of executable files in the directory (excluding README.md)
+executable_files=($(find "$directory" -maxdepth 1 -type f -executable ! -name README.md | head -n 9))
+
+# Loop through the executable files and write shebang to each file
+for file in "${executable_files[@]}"; do
+    # Write shebang to the file
+    echo "#!/usr/bin/env bash" > "$file"
+
+done
+
+echo "Shebang added to 9 executable files in $directory (excluding README.md)"
+
