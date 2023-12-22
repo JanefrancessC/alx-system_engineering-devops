@@ -9,7 +9,7 @@
 filename="/var/run/myscript.pid"
 
 deletefile() {
-	if [ -e "$filename"]; then
+	if [ -e "$filename" ]; then
 		rm "$filename"
 	fi
 	exit
